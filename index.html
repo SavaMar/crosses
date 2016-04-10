@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link href="style.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<!--<link rel="stylesheet" type="text/css" href="animate.css"> -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cousine&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+<meta charset="utf-8" />
+</head>
+<!-- body blocks -->
+<body>
+	<div class="main_title">
+		<p>Noughts and Crosses</p>
+	</div>
+
+	<div class="input_block">
+		<p>Количество ячеек NxN</p>
+		<p>cells__
+			<input type="text"  name="basisVal" id="mytext">
+		</p>
+		<p>не меньше 3 и не больше 10</p>
+		<p>10 это перебор</p>
+
+		<div class="button_build">
+			<p>Построить</p>
+		</div>
+
+		<div class='button_clear'>
+			<span>CLEAR</span>
+		</div>
+
+		<p id="result">послание</p>
+	</div>
+
+	<div id="main">
+		<div class="cells_field">
+		</div>
+	</div>
+	<div class="transparent_layer"></div>
+	<div class="notyfy_block">
+		<div><h2>Game Over</h2>
+			<p>You see it? If yes, tip top</p>
+			<div class="try_agan">TRY EGAIN</div><div class="try_agan">TRY EGAIN</div>
+		</div>
+		<div><img src="img/greenMonstr.png"></div>
+	</div>
+<!--	<div class="exception"></div> -->
+
+	<!-- <p id="result">послание</p> -->
+<!-- 	<div class='button_clear'>
+		<p>CLEAR</p>
+	</div> -->
+
+	<script src='components/jquery/dist/jquery.js'></script>
+	<script src="js/core.js" type="text/javascript"></script>
+</body>
+</html>

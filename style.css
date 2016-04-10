@@ -1,0 +1,217 @@
+@import "animate.css";
+
+body {
+	font-family:'Cousine';
+	background: url(img/pattern5.jpg);
+}
+
+#mytext {
+	background-color: #F1D38A;
+	padding: 3px;
+	font-size: 15px;
+}
+/* main block */
+#main {
+	background-color: rgba(255,255,255,.5);
+	margin: 50px auto 200px 420px;
+	height: 100px;
+	width:100px;
+	/*margin-left: 420px;*/
+/*	height: 339px;
+	width: 343px;*/
+	padding: 31px 0px 0px 41px;
+	border-radius: 15px;
+	display:inline-block;
+}
+
+.main_title {
+	font-family: 'Lobster', cursive;
+	margin: 20px auto 0px auto;
+	width: 515px;
+	text-align: center;
+	font-size: 50px;
+
+}
+
+.cell {
+	margin-top: -5px;
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	border: 1px solid #000;
+	margin-left: -3px;
+	/*background-color: #339999;*/
+/*	background-color: rgba(1,51,62, .7);*/
+background-color: rgba(234,194,99,.5);
+	cursor: pointer;
+	position: relative;
+	transition: 2s;
+}
+
+.o:after {
+	/*content: "\f10c"; */
+	content: "";
+	background: url(img/null.png) no-repeat 0px 0px;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	color:#fff;
+	position: absolute;
+	font-size: 100px; /*100px*/
+	z-index: 20;
+	width: 100px;
+    height: 100px;
+    color:#666666;
+/*	right: 8px;
+	bottom: -2px;*/
+	  -webkit-animation-name: bounceIn;
+          animation-name: bounceIn;
+  -webkit-animation-duration: .75s;
+          animation-duration: .75s;
+	
+}
+
+.x:after {
+/*	content: "\f00d"; */
+	content: "";
+	background: url(img/cross.png) no-repeat 0px 0px;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	color:#fff;
+	position: absolute;
+	font-size: 100px; /*100px*/
+	z-index: 20;
+	width: 100px;
+    height: 100px;
+    color:#666666;
+	/*right: 12px;*/
+	/*bottom: 1px;*/
+	  -webkit-animation-name: bounceIn;
+          animation-name: bounceIn;
+  -webkit-animation-duration: .75s;
+          animation-duration: .75s;
+}
+
+#result {
+	display: inline-block;
+	background-color: #F1F1F1;
+	padding: 20px;
+	margin-left: 20px;
+	border-radius: 10px;
+	visibility: hidden;
+}
+
+.button_clear {
+/*	background-color: #1C986F;*/
+	background-color: #01333E;
+	border-radius: 10px;
+	color: #fff;
+	text-shadow: 5px 2px 2px rgba(80, 80, 80, .6);
+	-webkit-box-shadow: 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+/*	margin-left: 148px;
+*/	margin-top: 20px;
+	text-align: center;
+	height: 60px;
+	padding-top: 27px;
+/*	width: 250px;*/
+	cursor: pointer;
+
+}
+
+.button_clear span {
+	padding: 20px;
+	font-size: 31px;
+}
+.button_clear:hover {
+	-webkit-box-shadow: inset 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    inset 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         inset 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+	/*transition: .5s;*/
+}
+
+/*left panel*/
+/*тот блок слева =) все что построить*/
+.input_block {
+	background-color: rgba(255,255,255,.5);
+	display:inline-block;
+	padding:20px;
+	border-radius:15px;
+	margin: 50px 0px 0px 50px;
+	position: fixed;
+}
+.input_block p {
+	text-align: center;
+	padding: 5px;
+}
+
+
+.button_build {
+/*	background-color: #1C986F;*/
+	background-color: #0D3D3F;
+	border-radius: 10px;
+	color:#fff;
+	text-align: center;
+	margin-top: 27px;
+}
+.button_build p {
+	padding: 15px;
+	cursor: pointer;
+}
+
+.button_build:hover {
+	-webkit-box-shadow: inset 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    inset 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         inset 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+}
+
+/*notify*/
+.notyfy_block {
+	background-color: #ddd;
+	position: absolute;
+	z-index: 55;
+	padding: 20px;
+	top: 20%;
+	left: 25%;
+	border-radius: 10px;
+	width: 600px;
+	text-align: center;
+	height: 200px;
+	display: none;
+}
+
+.notyfy_block h2 {
+	margin-top: 20px;
+	padding: 20px;
+	font-size: 30px;
+}
+
+.transparent_layer{
+	background-color: rgba(0,0,0, .6);
+	width: 100%;
+	height:100%;
+	position: absolute;
+	z-index: 50;
+	top: 0px;
+	display: none;
+}
+
+.try_agan {
+	padding: 20px;
+	background-color: #375A2A;
+	margin: 20px 10px 20px 10px;
+	cursor: pointer;
+	border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+}
+
+.try_agan:hover {
+	-webkit-box-shadow: inset 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    inset 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         inset 5px 5px 14px 0px rgba(50, 50, 50, 0.75);
+}
